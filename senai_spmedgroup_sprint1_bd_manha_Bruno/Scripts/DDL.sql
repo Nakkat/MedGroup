@@ -31,6 +31,7 @@ CREATE TABLE Usuarios (
 	IdUsuario INT PRIMARY KEY IDENTITY,
 	IdTipoUsuario  INT FOREIGN KEY REFERENCES TipoUsuario(IdTipoUsuario),
 	IdEndereco	   INT FOREIGN KEY REFERENCES Enderecos(IdEndereco),
+	IdGenero	   INT FOREIGN KEY REFERENCES Generos(IdGenero),
 	Nome		   VARCHAR(255) NOT NULL,
 	Email		   VARCHAR(255) NOT NULL,
 	Senha		   VARCHAR(255) NOT NULL
@@ -71,15 +72,9 @@ CREATE TABLE Consultas (
 	IdConsulta		    INT PRIMARY KEY IDENTITY,
 	IdDadosPaciente		INT FOREIGN KEY REFERENCES DadosPaciente(IdDadosPaciente),
 	IdDadosMedico		INT FOREIGN KEY REFERENCES DadosMedico(IdDadosMedico),
-	DataConsulta	DATETIME2,
+	IdStatusSituacao	INT FOREIGN KEY REFERENCES StatusSituacao(IdStatusSituacao),
+	DataConsulta	    DATETIME2,
 )
-
-drop table StatusSituacao
-drop table generos
-drop table usuarios
-drop table consultas
-alter table consultas drop column statussituacao
-alter table usuarios drop column generos
 
 GO
 

@@ -114,6 +114,20 @@ INSERT INTO Enderecos VALUES (
 
 GO
 
+INSERT INTO Generos VALUES (
+	'Masculino'
+)
+
+INSERT INTO Generos VALUES (
+	'Feminino'
+)
+
+INSERT INTO Generos VALUES (
+	'Outros'
+)
+
+GO
+
 INSERT INTO Usuarios VALUES (
 	1,1,1,'Bruno','adm@adm.com','123'
 )
@@ -137,11 +151,11 @@ INSERT INTO Usuarios VALUES (
 GO
 
 INSERT INTO DadosPaciente VALUES (
-	'3','201021292','10223923002'
+	'24','Carlos','201021292','10223923002'
 )
 
 INSERT INTO DadosPaciente VALUES (
-	'5','272932931','29320349301'
+	'26','Eduardo','272932931','29320349301'
 )
 
 GO
@@ -156,39 +170,11 @@ INSERT INTO Clinicas VALUES (
 GO
 
 INSERT INTO DadosMedico VALUES (
-	2,1,1,'23201SP'
+	23,1,1,'Mariana','23201SP'
 );
 INSERT INTO DadosMedico VALUES (
-	4,2,2,'24201RJ'
+	25,2,2,'Ana','24201RJ'
 );
-
-GO
-
-INSERT INTO Consultas VALUES (
-	1,1,1,'07/03/2020 12:00:59','Realizada'
-)
-
-INSERT INTO Consultas VALUES (
-	2,1,2,'07/03/2020 13:00:59','Cancelada'
-)
-
-INSERT INTO Consultas VALUES (
-	2,1,3,'07/03/2020 14:00:59','Agendada'
-)
-
-GO
-
-INSERT INTO Generos VALUES (
-	'Masculino'
-)
-
-INSERT INTO Generos VALUES (
-	'Feminino'
-)
-
-INSERT INTO Generos VALUES (
-	'Outros'
-)
 
 GO
 
@@ -206,14 +192,20 @@ INSERT INTO StatusSituacao VALUES(
 
 GO
 
-UPDATE Usuarios SET IdGenero = 1 WHERE IdUsuario = 1 
-UPDATE Usuarios SET IdGenero = 2 WHERE IdUsuario = 2
-UPDATE Usuarios SET IdGenero = 1 WHERE IdUsuario = 3
-UPDATE Usuarios SET IdGenero = 2 WHERE IdUsuario = 4
-UPDATE Usuarios SET IdGenero = 3 WHERE IdUsuario = 5
+INSERT INTO Consultas VALUES (
+	1,5,1,'07/03/2020 12:00:59','dor no ouvido'
+)
 
-UPDATE Usuarios SET IdStatusSituacao = 1 WHERE IdConsulta = 4
-UPDATE Usuarios SET IdStatusSituacao = 2 WHERE IdConsulta = 5
-UPDATE Usuarios SET IdStatusSituacao = 3 WHERE IdConsulta = 6
+INSERT INTO Consultas VALUES (
+	2,5,2,'07/03/2020 13:00:59',null
+)
+
+INSERT INTO Consultas VALUES (
+	2,6,3,'07/03/2020 14:00:59', null
+)
+
+GO
+
+ALTER TABLE consultas ADD Descricao VARCHAR(255)
 
 GO
