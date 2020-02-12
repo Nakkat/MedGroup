@@ -129,23 +129,23 @@ INSERT INTO Generos VALUES (
 GO
 
 INSERT INTO Usuarios VALUES (
-	1,1,1,'Bruno','adm@adm.com','123'
+	1,1,1,'Bruno','adm@adm.com','123','04/02/2000'
 )
 
 INSERT INTO Usuarios VALUES (
-	2,2,2,'Mariana','mari@email.com','234'
+	2,2,2,'Mariana','mari@email.com','234','04/02/2001'
 )
 
 INSERT INTO Usuarios VALUES (
-	3,3,1,'Carlos','carlos@email.com','345'
+	3,3,1,'Carlos','carlos@email.com','345','04/02/2002'
 )
 
 INSERT INTO Usuarios VALUES (
-	2,4,2,'Ana','ana@email.com','234'
+	2,4,2,'Ana','ana@email.com','234','04/02/2003'
 )
 
 INSERT INTO Usuarios VALUES (
-	3,5,3,'Eduardo','dudu@email.com','345'
+	3,5,3,'Eduardo','dudu@email.com','345','04/02/2004'
 )
 
 GO
@@ -206,6 +206,6 @@ INSERT INTO Consultas VALUES (
 
 GO
 
-ALTER TABLE consultas ADD Descricao VARCHAR(255)
+ALTER TABLE Consultas ADD Descricao VARCHAR(255)
 
 GO

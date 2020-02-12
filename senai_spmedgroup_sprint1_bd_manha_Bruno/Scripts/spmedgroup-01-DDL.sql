@@ -34,13 +34,15 @@ CREATE TABLE Usuarios (
 	IdGenero	   INT FOREIGN KEY REFERENCES Generos(IdGenero),
 	Nome		   VARCHAR(255) NOT NULL,
 	Email		   VARCHAR(255) NOT NULL,
-	Senha		   VARCHAR(255) NOT NULL
+	Senha		   VARCHAR(255) NOT NULL,
+	DataNascimento Date
 )	
 
 CREATE TABLE DadosPaciente (
 	IdDadosPaciente INT PRIMARY KEY IDENTITY,
 	IdUsuario		INT FOREIGN KEY REFERENCES Usuarios(IdUsuario),
 	NomePaciente	VARCHAR(255),
+	DataNascimento  Date,
 	RG			    CHAR(9) NOT NULL,
 	CPF			    CHAR(11) NOT NULL
 )

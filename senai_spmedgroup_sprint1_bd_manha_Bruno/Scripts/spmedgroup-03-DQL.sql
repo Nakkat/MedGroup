@@ -1,6 +1,6 @@
 -- DQL
 
--- SEM INNER JOIN 
+-- SEM INNER JOIN
 
 SELECT NomeEspecialidade FROM Especialidades
 SELECT NomeEndereco,Telefone FROM Enderecos
@@ -44,3 +44,6 @@ INNER JOIN Clinicas on Clinicas.IdClinica = DadosMedico.IdClinica
 INNER JOIN Enderecos on Enderecos.IdEndereco = Clinicas.IdEndereco
 
 GO
+
+SELECT COUNT (IdUsuario) as Usuarios FROM Usuarios 
+SELECT CONVERT(VARCHAR(8), GETDATE(), 1) AS [MM/DD/YY]
