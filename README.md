@@ -1,2 +1,2 @@
-#  senai_spmedgroup_sprint_bd_manha_Bruno
+#  MedGroup
 Projeto Individual Desenvolvido na Escola SENAI de Informática (Segundo Semestre)
