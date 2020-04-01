@@ -13,7 +13,6 @@ SELECT * FROM Clinicas
 SELECT * FROM DadosMedico
 SELECT * FROM Consultas
 
-
 -- COM INNER JOIN 
 
 SELECT Email,Senha,NomeTipoUsuario,NomeGenero, NomeEndereco,Telefone FROM Usuarios 

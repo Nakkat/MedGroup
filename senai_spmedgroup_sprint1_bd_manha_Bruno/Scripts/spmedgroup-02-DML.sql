@@ -151,29 +151,29 @@ INSERT INTO Usuarios VALUES (
 GO
 
 INSERT INTO DadosPaciente VALUES (
-	'24','Carlos','201021292','10223923002'
+	3,'Carlos','1970/05/12','201021292','10223923002'
 )
 
 INSERT INTO DadosPaciente VALUES (
-	'26','Eduardo','272932931','29320349301'
+	5,'Eduardo','1960/07/09','272932931','29320349301'
 )
 
 GO
 
 INSERT INTO Clinicas VALUES (
-	6,28392838493813,'SP Medical Group','05:00:00','22:00:00'
+	6,28392838493813,'SP Medical Group','05:00:00','22:00:00', 'SP Megroup'
 )
 INSERT INTO Clinicas VALUES (
-	7,28392738493813,'SP MecaGroup','10:00:00','20:00:00'
+	7,28392738493813,'SP Medical Group','10:00:00','20:00:00', 'SP Megroup'
 )
 
 GO
 
 INSERT INTO DadosMedico VALUES (
-	23,1,1,'Mariana','23201SP'
+	2,1,1,'Mariana','23201SP'
 );
 INSERT INTO DadosMedico VALUES (
-	25,2,2,'Ana','24201RJ'
+	5,2,2,'Ana','24201RJ'
 );
 
 GO
@@ -193,19 +193,22 @@ INSERT INTO StatusSituacao VALUES(
 GO
 
 INSERT INTO Consultas VALUES (
-	1,5,1,'07/03/2020 12:00:59','dor no ouvido'
+	3,4,1,'07/03/2020 12:00:59','dor no ouvido',5
 )
 
 INSERT INTO Consultas VALUES (
-	2,5,2,'07/03/2020 13:00:59',null
+	4,3,2,'07/03/2020 13:00:59',null,6
 )
 
 INSERT INTO Consultas VALUES (
-	2,6,3,'07/03/2020 14:00:59', null
+	3,3,3,'07/03/2020 14:00:59', null,6
 )
 
 GO
 
 ALTER TABLE Consultas ADD Descricao VARCHAR(255)
 
+ALTER TABLE Clinicas ADD NomeFantasia VARCHAR (255)
+
+ALTER TABLE Consultas ADD IdClinica INT FOREIGN KEY REFERENCES Clinicas (IdClinica)
 GO
